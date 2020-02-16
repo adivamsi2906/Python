@@ -1,0 +1,182 @@
+Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 01:54:44) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> id=[1,2,3,4]
+>>> emp_name=["ram","preeti","sati","jon"]
+>>> emp_list=[id,emp_name,num_emp]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'num_emp' is not defined
+>>> emp_list=[id,emp_name]
+>>> print(emp_list)
+[[1, 2, 3, 4], ['ram', 'preeti', 'sati', 'jon']]
+>>> print(emp_name[0])
+ram
+>>> print(emp_name[-1])
+jon
+>>> print(emp_list[-1][-1])
+jon
+>>> emp-name[-1]="sree"
+  File "<stdin>", line 1
+SyntaxError: can't assign to operator
+>>> emp_name[-1]="sree"
+>>> print(emp_name[-1])
+sree
+>>> emp_list[-1][-1]="veera'
+  File "<stdin>", line 1
+    emp_list[-1][-1]="veera'
+                           ^
+SyntaxError: EOL while scanning string literal
+>>> id.append(5)
+>>> print(id)
+[1, 2, 3, 4, 5]
+>>> emp_list.append(id)
+>>> print(emp_list)
+[[1, 2, 3, 4, 5], ['ram', 'preeti', 'sati', 'sree'], [1, 2, 3, 4, 5]]
+>>> id.insert(0,9)
+>>> print(id)
+[9, 1, 2, 3, 4, 5]
+>>> del id[-1]
+>>> print(id)
+[9, 1, 2, 3, 4]
+>>> id.remove(4)
+>>> print(id)
+[9, 1, 2, 3]
+>>> salary=['high','med,'low','low']
+  File "<stdin>", line 1
+    salary=['high','med,'low','low']
+                           ^
+SyntaxError: invalid syntax
+>>> sal=['high','med','low','high']
+>>> print(sal)
+['high', 'med', 'low', 'high']
+>>> id.pop(1)
+1
+>>> print(id)
+[9, 2, 3]
+>>> id.pop()
+3
+>>> emp=('p001','jon',35,40000)
+>>> print(emp)
+('p001', 'jon', 35, 40000)
+>>> print(emp[1])
+jon
+>>> print(emp[-1])
+40000
+>>> emp[-1]=90000
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> print(emp[-1])
+40000
+>>>  emp[0:2]
+  File "<stdin>", line 1
+    emp[0:2]
+    ^
+IndentationError: unexpected indent
+>>> emp[0:2]
+('p001', 'jon')
+>>> emp[0:-1]
+('p001', 'jon', 35)
+>>> len(emp)
+4
+>>> emp.pop()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'pop'
+>>> min(emp)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'int' and 'str'
+>>> eng=(88,09,08,77,)
+  File "<stdin>", line 1
+    eng=(88,09,08,77,)
+             ^
+SyntaxError: invalid token
+>>> eng=(88,09,08,77)
+  File "<stdin>", line 1
+    eng=(88,09,08,77)
+             ^
+SyntaxError: invalid token
+>>> eng=(1,2,3,4,5)
+>>> max(eng)
+5
+>>> emp+eng
+('p001', 'jon', 35, 40000, 1, 2, 3, 4, 5)
+>>> emp.append(eng)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'append'
+>>> fuel={"petrol";1,"disel":2}
+  File "<stdin>", line 1
+    fuel={"petrol";1,"disel":2}
+                  ^
+SyntaxError: invalid syntax
+>>> fuel={"petrol":1,"disel":2}
+>>> print(fuel)
+{'petrol': 1, 'disel': 2}
+>>> print(fuel['petrol'])
+1
+>>> fuel.keys()
+dict_keys(['petrol', 'disel'])
+>>> fuel.values()
+dict_values([1, 2])
+>>> fuel.items()
+dict_items([('petrol', 1), ('disel', 2)])
+>>> fuel["disel"]=3
+>>> fuel.items()
+dict_items([('petrol', 1), ('disel', 3)])
+>>> fuel["di"]=4
+>>> fuel.items()
+dict_items([('petrol', 1), ('disel', 3), ('di', 4)])
+>>> fuel.update({"rare";9})
+  File "<stdin>", line 1
+    fuel.update({"rare";9})
+                       ^
+SyntaxError: invalid syntax
+>>> fuel.update({"rare":9})
+>>> fuel.items()
+dict_items([('petrol', 1), ('disel', 3), ('di', 4), ('rare', 9)])
+>>> fuel.update({"rare":5})
+>>> fuel.items()
+dict_items([('petrol', 1), ('disel', 3), ('di', 4), ('rare', 5)])
+>>> del fuel['petrol']
+>>> fuel.items()
+dict_items([('disel', 3), ('di', 4), ('rare', 5)])
+>>> fuel.clear()
+>>> fuel.items()
+dict_items([])
+>>> fuel.update({"rare":5})
+>>> fuel.items()
+dict_items([('rare', 5)])
+>>> age={32,44,55,6,77,55,88}
+>>> print(age)
+{32, 6, 44, 77, 55, 88}
+>>> age[1]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'set' object is not subscriptable
+>>> age.add(9)
+>>> print(age)
+{32, 6, 9, 44, 77, 55, 88}
+>>> age.discard(9)
+>>> print(age)
+{32, 6, 44, 77, 55, 88}
+>>> age.clear()
+>>> print(age)
+set()
+>>> age.add(9)
+>>> print(age)
+{9}
+>>> j_ds={'R','PY','Tableu'}
+>>> dss={'R','PY','scala'}
+>>> print(j_ds)
+{'Tableu', 'R', 'PY'}
+>>> j_ds.union(dss)
+{'Tableu', 'scala', 'R', 'PY'}
+>>> j_ds.intersection(dss)
+{'R', 'PY'}
+>>> j_ds.difference(dss)
+{'Tableu'}
+>>> j_ds.symmetric_difference(dss)
+{'Tableu', 'scala'}
+>>>
